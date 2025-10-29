@@ -1,0 +1,165 @@
+def right_triangle(n):
+    for i in range(1, n + 1):
+        print("*" * i)
+
+def inverted_right_triangle(n):
+    for i in range(n, 0, -1):
+        print("*" * i)
+
+def right_aligned_triangle(n):
+    for i in range(1, n + 1):
+        print(" " * (n - i) + "*" * i)
+
+def pyramid(n):
+    for i in range(n):
+        print(" " * (n - i - 1) + "*" * (2 * i + 1))
+
+def inverted_pyramid(n):
+    for i in range(n, 0, -1):
+        print(" " * (n - i) + "*" * (2 * i - 1))
+
+def diamond(n):
+    for i in range(n):
+        print(" " * (n - i - 1) + "*" * (2 * i + 1))
+    for i in range(n - 2, -1, -1):
+        print(" " * (n - i - 1) + "*" * (2 * i + 1))
+
+def square(n):
+    for i in range(n):
+        print("* " * n)
+
+def hollow_square(n):
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        print()
+
+def hollow_pyramid(n):
+    for i in range(n):
+        for j in range(n - i - 1):
+            print(" ", end="")
+        for j in range(2 * i + 1):
+            if j == 0 or j == 2 * i or i == n - 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def hollow_diamond(n):
+    for i in range(n):
+        for j in range(n - i - 1):
+            print(" ", end="")
+        for j in range(2 * i + 1):
+            if j == 0 or j == 2 * i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+    for i in range(n - 2, -1, -1):
+        for j in range(n - i - 1):
+            print(" ", end="")
+        for j in range(2 * i + 1):
+            if j == 0 or j == 2 * i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def hourglass(n):
+    for i in range(n, 0, -1):
+        print(" " * (n - i) + "*" * (2 * i - 1))
+    for i in range(2, n + 1):
+        print(" " * (n - i) + "*" * (2 * i - 1))
+
+def x_pattern(n):
+    for i in range(n):
+        for j in range(n):
+            if j == i or j == n - i - 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def plus_pattern(n):
+    for i in range(n):
+        for j in range(n):
+            if i == n // 2 or j == n // 2:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def butterfly(n):
+    for i in range(1, n + 1):
+        print("*" * i + " " * (2 * (n - i)) + "*" * i)
+    for i in range(n, 0, -1):
+        print("*" * i + " " * (2 * (n - i)) + "*" * i)
+
+def hollow_butterfly(n):
+    for i in range(1, n + 1):
+        for j in range(1, 2 * n + 1):
+            if j == 1 or j == i or j == 2 * n or j == 2 * n - i + 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+    for i in range(n, 0, -1):
+        for j in range(1, 2 * n + 1):
+            if j == 1 or j == i or j == 2 * n or j == 2 * n - i + 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def hollow_diamond_in_square(n):
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1 or i == j or j == n - i - 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+# -------------------------------
+# Menu Section
+# -------------------------------
+patterns = {
+    1: ("Right-Angled Triangle", right_triangle),
+    2: ("Inverted Right-Angled Triangle", inverted_right_triangle),
+    3: ("Right Aligned Triangle", right_aligned_triangle),
+    4: ("Pyramid", pyramid),
+    5: ("Inverted Pyramid", inverted_pyramid),
+    6: ("Diamond", diamond),
+    7: ("Square", square),
+    8: ("Hollow Square", hollow_square),
+    9: ("Hollow Pyramid", hollow_pyramid),
+    10: ("Hollow Diamond", hollow_diamond),
+    11: ("Hourglass", hourglass),
+    12: ("X Pattern", x_pattern),
+    13: ("Plus (+) Pattern", plus_pattern),
+    14: ("Butterfly", butterfly),
+    15: ("Hollow Butterfly", hollow_butterfly),
+    16: ("Hollow Diamond Inside Square", hollow_diamond_in_square)
+}
+
+while True:
+    print("\n" + "-" * 40)
+    print("⭐ STAR PATTERN MENU ⭐")
+    for k, v in patterns.items():
+        print(f"{k}. {v[0]}")
+    print("0. Exit")
+    print("-" * 40)
+    
+    choice = int(input("Enter your choice (0–16): "))
+    if choice == 0:
+        print("Exiting... 👋")
+        break
+    elif choice in patterns:
+        n = int(input("Enter number of rows: "))
+        print(f"\n{patterns[choice][0]} (n={n})\n")
+        patterns[choice][1](n)
+    else:
+        print("❌ Invalid choice. Try again!")
