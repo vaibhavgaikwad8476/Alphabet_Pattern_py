@@ -1,0 +1,247 @@
+def print_A():
+    for i in range(7):
+        for j in range(5):
+            if (j == 0 or j == 4) and i != 0 or (i == 0 or i == 3) and (j > 0 and j < 4):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_B():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or (j == 4 and i not in [0, 3, 6]) or (i in [0, 3, 6] and j < 4):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_C():
+    for i in range(7):
+        for j in range(5):
+            if (j == 0 and i not in [0, 6]) or ((i == 0 or i == 6) and j > 0):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_D():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or (j == 4 and i not in [0, 6]) or ((i == 0 or i == 6) and j < 4):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_E():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or i in [0, 3, 6]:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_F():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or i in [0, 3]:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_G():
+    for i in range(7):
+        for j in range(5):
+            if (j == 0 and i not in [0, 6]) or ((i == 0 or i == 6) and j > 0) or (i >= 3 and j == 4 and i != 3):
+                print("*", end="")
+            elif i == 3 and j >= 2:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_H():
+    for i in range(7):
+        for j in range(5):
+            if j in [0, 4] or i == 3:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_I():
+    for i in range(7):
+        for j in range(5):
+            if i in [0, 6] or j == 2:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_J():
+    for i in range(7):
+        for j in range(5):
+            if i == 0 or (j == 2 and i != 6) or (i == 6 and j < 2):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_K():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or j == 4 - i or j == i - 2:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_L():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or i == 6:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_M():
+    for i in range(7):
+        for j in range(7):
+            if j == 0 or j == 6 or (i == j and j < 4) or (i + j == 6 and j >= 3):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_N():
+    for i in range(7):
+        for j in range(7):
+            if j == 0 or j == 6 or i == j:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_O():
+    for i in range(7):
+        for j in range(5):
+            if (i in [0, 6] and j in [1, 2, 3]) or (j in [0, 4] and i not in [0, 6]):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_P():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or (i in [0, 3] and j < 4) or (j == 4 and i in [1, 2]):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_Q():
+    for i in range(7):
+        for j in range(5):
+            if (i in [0, 6] and j in [1, 2, 3]) or (j in [0, 4] and i not in [0, 6]) or (i == j and i > 3):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_R():
+    for i in range(7):
+        for j in range(5):
+            if j == 0 or (i in [0, 3] and j < 4) or (j == 4 and i in [1, 2]) or (i - j == 3):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_S():
+    for i in range(7):
+        for j in range(5):
+            if (i in [0, 3, 6] and j > 0 and j < 4) or (j == 0 and i in [1, 2, 6]) or (j == 4 and i in [0, 4, 5]):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_T():
+    for i in range(7):
+        for j in range(5):
+            if i == 0 or j == 2:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_U():
+    for i in range(7):
+        for j in range(5):
+            if (j in [0, 4] and i != 6) or (i == 6 and j in [1, 2, 3]):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_V():
+    for i in range(7):
+        for j in range(7):
+            if (j == i and i < 4) or (j == 6 - i and i < 4) or (i >= 4 and j in [3]):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_W():
+    for i in range(7):
+        for j in range(7):
+            if j in [0, 6] or (i >= 3 and (i == j or i + j == 6)):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_X():
+    for i in range(7):
+        for j in range(7):
+            if j == i or j == 6 - i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_Y():
+    for i in range(7):
+        for j in range(7):
+            if (i < 4 and (j == i or j == 6 - i)) or (i >= 4 and j == 3):
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+def print_Z():
+    for i in range(7):
+        for j in range(7):
+            if i == 0 or i == 6 or j == 6 - i:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+
+# --- Print all alphabets ---
+letters = [
+    print_A, print_B, print_C, print_D, print_E, print_F, print_G, print_H, print_I, print_J,
+    print_K, print_L, print_M, print_N, print_O, print_P, print_Q, print_R, print_S, print_T,
+    print_U, print_V, print_W, print_X, print_Y, print_Z
+]
+
+for func in letters:
+    func()
+    print("\n")
